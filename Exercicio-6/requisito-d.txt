@@ -1,0 +1,6 @@
+public void contaClicks(View view) {
+    TextView textViewClickCounter = findViewById(R.id.textViewClickCounter);
+    int contador = Integer.parseInt(textViewClickCounter.getText().toString());
+    contador++;
+    textViewClickCounter.setText(String.valueOf(contador));
+}

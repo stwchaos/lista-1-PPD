@@ -1,0 +1,68 @@
+**Questões teóricas
+
+
+1) O é a classe R em um projeto android?
+
+Ao compilar o projeto, a classe R é criada automaticamente e contém constantes para acessar os diferentes recursos do projeto. Se um novo recurso, como uma nova imagem, for adicionado ao projeto, a classe R é gerada automaticamente com uma nova constante para o novo recurso.
+
+
+2) O que Activity no Android, para que serve?
+
+A Activity é um componente do Android que tem a função de exibir telas ao usuário e permitir a interação através de toques e cliques. Cada Activity representa uma tela específica e possui uma programação específica para controlá-la.
+
+
+3) O que é o arquivo Manifesto em um projeto Android e quais informações podem ser declaradas nele.
+
+O arquivo manifesto contém informações fundamentais sobre o aplicativo que são utilizadas pelas ferramentas de compilação do Android, pelo sistema operacional Android e pelo Google Play.
+O arquivo manifesto de um projeto Android pode conter várias informações importantes sobre o aplicativo, incluindo:
+
+    - Nome do pacote do aplicativo;
+    - Versão do aplicativo;
+    - Permissões necessárias para o aplicativo acessar recursos do dispositivo, como câmera, microfone ou localização;
+    - Lista de componentes do aplicativo, como Activities, Services, Broadcast Receivers e Content Providers;
+    - Intenções (Intents) usadas para iniciar componentes do aplicativo;
+    - A versão mínima do Android necessária para rodar o aplicativo;
+    - Configurações de orientação de tela, idioma padrão e configurações de compatibilidade do aplicativo;
+    - Metadados adicionais que podem ser usados por outras partes do sistema ou aplicativo.
+
+
+4) O que são os níveis de API de uma aplicação Android e o que implica uma aplicação utilizar uma determinada API.
+
+Cada dispositivo Android é executado em um único nível de API, que é exclusivo para cada versão da plataforma Android. O nível de API é responsável por identificar precisamente a versão do conjunto de APIs que o aplicativo pode chamar, além de identificar a combinação de elementos do manifesto, permissões, entre outros.
+
+
+5) O que é constraintLayout no android? Para que serve, cite ao menos dois exemplos de uso com posicionamento de um componente qualquer.
+
+ConstraintLayout é um layout do Android que permite criar telas flexíveis e complexas, posicionando os componentes com base em suas relações uns com os outros e com as bordas da tela.
+ 
+Dois exemplos de uso do ConstraintLayout com posicionamento de um componente qualquer:
+
+    1 - Posicionamento de um botão na parte inferior da tela:
+
+<Button
+    android:id="@+id/myButton"
+    android:text="Clique aqui"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/myTextView" />
+
+-----------------------------------------------------------------------
+   
+
+    2 - Posicionamento de uma imagem ao lado de um texto:
+
+
+
+<ImageView
+    android:id="@+id/myImage"
+    android:src="@drawable/my_image"
+    app:layout_constraintBottom_toBottomOf="@+id/myText"
+    app:layout_constraintLeft_toRightOf="@+id/myText"
+    app:layout_constraintTop_toTopOf="@+id/myText" />
+
+<TextView
+    android:id="@+id/myText"
+    android:text="Meu texto"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />

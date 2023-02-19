@@ -1,0 +1,15 @@
+class MainActivity : AppCompatActivity() {
+
+    private var randomNumber = 0
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val lowerLimitEditText: EditText = findViewById(R.id.et_lower)
+        val upperLimitEditText: EditText = findViewById(R.id.et_upper)
+        val generateButton: Button = findViewById(R.id.btn_generate)
+        val resultTextView: TextView = findViewById(R.id.tv_result)
+
+        generateButton.setOnClickListener {
+            val lowerLimit = lowerLimitEditText.text.toString().toIntOrNull()
